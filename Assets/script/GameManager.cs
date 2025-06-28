@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject plane;
     public float generatespeed = 0.1f;
     private float timestamp = 0;
-    public TextMeshPro text;
+    public TextMeshProUGUI text;
     private List<GameObject> bullets = new List<GameObject>();
     private float live;
     void Start()
