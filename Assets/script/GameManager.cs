@@ -18,10 +18,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         live = Time.time;
+        text.gameObject.SetActive(false);
     }
     void GameOver()
     {
         Time.timeScale = 0;
+        text.gameObject.SetActive(true);
         text.text = "GameOver\n you survive " + (Time.time - live).ToString() + "seconds";
     }
     // Update is called once per frame
