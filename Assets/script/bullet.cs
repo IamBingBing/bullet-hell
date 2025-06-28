@@ -15,9 +15,6 @@ public class bullet : MonoBehaviour
     void Update()
     {
         transform.Translate(new Vector3(0, -Time.deltaTime * 50f, 0));
-        if (Time.time > time + 5)
-        {
-            Destroy(this);
-        }
+        
     }
 }
