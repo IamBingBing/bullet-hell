@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;    
     public GameObject bullet;
     public GameObject plane;
     public float generatespeed = 0.1f;
@@ -18,10 +19,14 @@ public class GameManager : MonoBehaviour
     private float live;
     void Start()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
         live = Time.time;
         text.gameObject.SetActive(false);
     }
-    void GameOver()
+    public void GameOver()
     {
         Time.timeScale = 0;
         text.gameObject.SetActive(true);
